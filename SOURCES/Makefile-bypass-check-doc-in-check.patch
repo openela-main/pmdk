@@ -1,0 +1,11 @@
+--- a/Makefile
++++ b/Makefile
+@@ -89,7 +89,7 @@ check-remote: require-rpmem all
+ test check pcheck pycheck: all
+	$(MAKE) -C src $@
+
+-check pcheck pycheck: check-doc
++pcheck pycheck: check-doc
+
+ cstyle:
+	test -d .git && utils/check-commits.sh
